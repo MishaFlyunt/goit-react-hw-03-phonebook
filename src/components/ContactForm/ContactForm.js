@@ -45,25 +45,13 @@ export const ContactForm = ({ onAdd }) => {
       <FormStyled>
         <LabelStylet>
           <p>Name</p>
-          <FieldStyled
-            type="text"
-            name="name"
-            // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-          />
+          <FieldStyled type="text" name="name" />
           <ErrorMess name="name" component="div" />
         </LabelStylet>
 
         <LabelStylet>
           <p>Number</p>
-          <FieldStyled
-            type="tel"
-            name="number"
-            // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-          />
+          <FieldStyled type="tel" name="number" />
           <ErrorMess name="number" component="div" />
         </LabelStylet>
 
