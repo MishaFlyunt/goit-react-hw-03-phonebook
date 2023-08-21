@@ -15,17 +15,13 @@ const schema = Yup.object().shape({
       1,
       'Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d Artagnan'
     )
-    .required(
-      'Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d Artagnan'
-    ),
+    .required('Please enter a name'),
   number: Yup.string()
     .min(
       7,
       'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
     )
-    .required(
-      'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
-    ),
+    .required('Please enter the number'),
 });
 
 export const ContactForm = ({ onAdd }) => {
