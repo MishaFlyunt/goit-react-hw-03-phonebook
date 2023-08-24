@@ -50,7 +50,7 @@ export class App extends Component {
           newName.name.toLowerCase().trim()) &
         (contact.number.trim() === newName.number.trim())
     )
-      ? alert(` A contact with the name ${newName.name} already exists`)
+      ? alert(`Contact number ${newName.number} already exists`)
       : this.setState(prevState => {
           return {
             contacts: [...prevState.contacts, newName],
