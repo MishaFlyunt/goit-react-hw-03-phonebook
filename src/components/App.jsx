@@ -46,11 +46,11 @@ export class App extends Component {
     const { contacts } = this.state;
     contacts.some(
       contact =>
-        contact.name.toLowerCase().trim() ===
-          newName.name.toLowerCase().trim() ||
-        contact.number.trim() === newName.number.trim()
+        (contact.name.toLowerCase().trim() ===
+          newName.name.toLowerCase().trim()) &
+        (contact.number.trim() === newName.number.trim())
     )
-      ? alert(`${newName.name} is already in contacts`)
+      ? alert(` A contact with the name ${newName.name} already exists`)
       : this.setState(prevState => {
           return {
             contacts: [...prevState.contacts, newName],
